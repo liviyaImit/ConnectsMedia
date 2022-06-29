@@ -215,7 +215,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-shadow: inset 6px 6px 6px rgb(202, 200, 200), inset -6px -6px 6px rgb(231, 226, 226) ;
 }
 .pro-sidebar .pro-menu.shaped .pro-menu-item > .pro-inner-item > .pro-icon-wrapper {
-    background-color: #002868 !important;
+    background-color: transparent !important;
    
 }
 
@@ -229,14 +229,18 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transform: rotate(45deg) !important;
 }
 
+.pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item
+{
+    color:#111d42;
+}
 .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover
 {
-    color: red;
+    color: #aaa;
 }
 
 .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item > .pro-item-content:hover
 {
-    color: red !important;
+    color: #aaa !important;
 }
 
 

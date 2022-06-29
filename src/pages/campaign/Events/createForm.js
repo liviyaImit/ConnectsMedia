@@ -176,8 +176,8 @@ export default function CreateForm() {
                         <select id="frequency" required={true} className='select-months'>
                           <option value="Daily" selected={true}>Daily</option>
                           <option value="Weekly">Weekly</option>
-                          <option value="Weekly">Monthy</option>
-                          <option value="Weekly">Custom</option>
+                          <option value="Monthly">Monthly</option>
+                          <option value="Custom">Custom</option>
                                                       
                                                   
                         </select>
