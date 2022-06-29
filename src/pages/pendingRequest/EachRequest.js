@@ -110,7 +110,7 @@ export default function EachRequest() {
                                                 <p className='font-12'><span >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span></p>
                                             </div>
 
-                                            
+                                            <div className='order-view-box'>
                                             <div className='package-details-content-section'>
                                                 <p className='heading bold-text py-3'>Package Details</p>
 
@@ -144,7 +144,7 @@ export default function EachRequest() {
 
                                             </div>
                                             
-                                           
+                                            </div>
                                                
 
                                         </div>
@@ -154,8 +154,8 @@ export default function EachRequest() {
                                        
                                                 
                                             {Order.order_status === "PP" ? (<></>) :(
-                                                <>
-                                                <div className='space-between pb-5'>
+                                                
+                                                <div className='space-between py-5'>
 
                                                     {<Button variant="light" className="px-5" style={{fontSize:'20px',fontWeight:'bold'}} onClick={()=>accept()}  >Accept</Button>}
                                                         
@@ -169,7 +169,7 @@ export default function EachRequest() {
                                                 
                                                     
                                                 </div>
-                                                </>
+                                                
                                             )} 
 
                                                 {pkgReject &&( 

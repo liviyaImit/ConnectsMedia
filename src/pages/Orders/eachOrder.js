@@ -308,7 +308,7 @@ export default  function EachOrder() {
                                         </div>
 
 
-                                        <div className=' '>
+                                        <div className=''>
 
 
                                             <div className=''>
@@ -316,39 +316,48 @@ export default  function EachOrder() {
                                                 <p className='font-12'><span >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span></p>
                                             </div>
 
-                                            <div className='package-details-content-section'>
-                                                <p className='heading bold-text py-3'>Package Details</p>
 
-                                                <p>Package Cost : <span className='bold-text'> ${order.PACKAGE.packages_cost}.00 /month</span></p>
-                                                <p>Selected Months : <span className='bold-text'>{order.PACKAGE.months}</span></p>
-                                                <p>Drive Id : <a href={order.order.drive_id} target="_blank" rel="noreferrer">click here</a></p>
-                                            
+                                            <div className='order-view-box'>
 
-                                            </div>
-                                            <div className='package-details-content-section'>
+                                                    <div className='package-details-content-section'>
+                                                        <p className='heading bold-text py-3'>Package Details</p>
 
-                                            
-                                                <p className='heading bold-text py-3'>{order.PACKAGE_details.length ===0 ? "":"Specifications"}</p>
-
-                                                {order.PACKAGE_details && order.PACKAGE_details.map((d,id) =>
-
-                                                        <>
+                                                        <p>Package Cost : <span className='bold-text'> ${order.PACKAGE.packages_cost}.00 /month</span></p>
+                                                        <p>Selected Months : <span className='bold-text'>{order.PACKAGE.months}</span></p>
+                                                        <p>Drive Id : <a href={order.order.drive_id} target="_blank" rel="noreferrer">click here</a></p>
                                                     
 
-                                                    <div className=''>
-                                                        <p>{d.pspec_text}</p>
-                                                        <p>{d.pspec_ans}</p>
+                                                    </div>
+                                                    <div className='line-each'>
 
                                                     </div>
-                                                    </>
+
+                                                        <div className='package-details-content-section'>
+                                                        <p className='heading bold-text py-3'>{order.PACKAGE_details.length ===0 ? "":"Specifications"}</p>
+
+                                                        {order.PACKAGE_details && order.PACKAGE_details.map((d,id) =>
+
+                                                                <>
+                                                            
+
+                                                            <div className=''>
+                                                                <p>{d.pspec_text}</p>
+                                                                <p>{d.pspec_ans}</p>
+
+                                                            </div>
+                                                            </>
+                                                        
+                                                        )}
+
+                                                        <Button variant="light" className='px-5 ' onClick={()=>sent()}>Message</Button> 
                                                 
-                                                )}
+                                                    
+                                                    </div>
 
-                                                <Button variant="light" className='px-5 ' onClick={()=>sent()}>Message</Button> 
-                                           
-                                            
 
+                                                    <div></div>
                                             </div>
+                                            
                                         </div>
 
                                       

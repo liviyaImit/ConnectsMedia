@@ -39,16 +39,28 @@ text-align: end;
       // justify-content: space-around
       justify-content: flex-start;
   }
-  .space-between-two-btn{
-    display: flex;
-    flex-direction: row;
-      align-items: flex-start;
-      // justify-content: space-around
-      justify-content: flex-start;
-  }
+ 
   .content-end-two{
     margin-top: 20px;
     // margin-left: 40px;
   }
   
+}
+.space-between-two-btn{
+  display: flex;
+  flex-direction: row;
+    align-items: flex-start;
+    // justify-content: space-around
+    justify-content: flex-start;
+}
+.camp-400{
+  display: flex;
+  width: 100%;
+}
+@media (max-width:400px) {
+  .camp-400{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
 }

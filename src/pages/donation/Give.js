@@ -180,9 +180,7 @@ export default function Give() {
                                     //handle success
                                     console.log("after donation",response.data); 
 
-                                    // const res2 =  axios.post(Url+'checkAmount',{
-                                    //     id:paymentIntent.id
-                                    // });
+                                   
                                     history.push('/success');
                                     // console.log("res2 checkout= ",res2);
                     

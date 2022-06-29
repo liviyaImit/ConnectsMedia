@@ -139,7 +139,7 @@ export default function Index() {
   <div className='icon-tab-block'>
           {type === "Package" ? <FiPackage color='black' className='icon-tab'/> :<MdEmojiEvents color='black' className='icon-tab'/> }
 
-          <p className='header-banner-text'>{type==="Packages"?"Package":"Events"}</p>
+          <p className='header-banner-text'>{type==="Package"?"Packages":"Events"}</p>
           </div>
           </div>
             </div>

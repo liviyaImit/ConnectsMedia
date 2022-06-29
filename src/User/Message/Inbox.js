@@ -166,33 +166,7 @@ export default function Index() {
     <div>
 
    
-        {/* <Container >
-        
-        <div className='profileBefore' >
-            <img src={customerInfo === undefined ?picture :(imgUrl+customerInfo.cover_photo)} alt="cover" className='cover-img-dash' />
-           
-        </div> 
-
-        <div className='row-flex-align'>
-
-          <div className='profileDiv'>
-            <div className='profileInner'>
-              <img className='cover-img-dash' src={customerInfo === undefined ?picture :(imgUrl+customerInfo.photo)} alt="profile" style={{objectFit:'contain'}}/>
-              
-
-
-            </div>
-            
-          </div>
-
-                  <div className='header-banner' style={{marginLeft:'245px'}}>
-                    <FaArrowDown color='black' className='mt-4 mx-4' size={22}/>
-                    <p className='header-banner-text'>Inbox</p>
-                  </div>
-
-                  
-              </div> */}
-
+      
 
 
 <Container className='body-two'>

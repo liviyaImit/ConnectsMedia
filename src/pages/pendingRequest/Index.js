@@ -318,7 +318,7 @@ export default function Index() {
 
                                  
 
-                                    <div className=' padding-8rem space-between mb-5'>
+                                    <div className=' padding-8rem space-between pb-5'>
                                         
                                         {paybtn || eventList.event_status === "Accepted" ? (<> 
                                                     
@@ -326,9 +326,9 @@ export default function Index() {
                                                     </>):
                                                     ( eventList.event_status === 'Success' ? '' : (
                                                         <>
-                                                        {!pkgReject && <Button variant="light" onClick={()=>accept(eventList.event_cost,type,0)}>Accept</Button>}
+                                                        {!pkgReject && <Button variant="light" style={{fontSize:'20px',fontWeight:'bold'}} onClick={()=>accept(eventList.event_cost,type,0)}>Accept</Button>}
                                                         {(!spinner === false) && <Spinner animation="border" style={{marginLeft:'-21rem',color:'black'}}></Spinner>}
-                                                        {!rejectbtn && <Button variant="light" className="" onClick={()=>reason()}>Reject</Button>}
+                                                        {!rejectbtn && <Button variant="light" style={{fontSize:'20px',fontWeight:'bold'}} className="" onClick={()=>reason()}>Reject</Button>}
 
 
                                                             </>
@@ -364,7 +364,7 @@ export default function Index() {
 
                                  {(paybtn || eventList.event_status === "Accepted") && 
                                  
-                                 <Container  className="event-bill-400">
+                                 <Container  className="event-bill-400 ">
                                   <div className=''>
                                         {subOrder && 
                                         <table className="table table-striped table-light ">
@@ -423,7 +423,7 @@ export default function Index() {
                                             </div>
 
 
-                                           
+                                            <div className='order-view-box'>
                                             <div className='package-details-content-section'>
                                                 <p className='heading bold-text py-3'>Package Details</p>
 
@@ -456,7 +456,7 @@ export default function Index() {
 
                                             </div>
                                             
-                                               
+                                               </div>
 
                                         </div>
 
@@ -501,13 +501,13 @@ export default function Index() {
                                        (
                                            pkgData.packages_status === "Success" ? '' :(
                                                <>
-                                           <div className='space-between '>
+                                           <div className='space-between py-5'>
                                           
-                                        {!pkgReject && <Button variant="light" className='' onClick={()=>accept(pkgData.packages_cost,type,pkgData.months)}>Accept</Button>}
+                                        {!pkgReject && <Button variant="light" className='' style={{fontSize:'20px',fontWeight:'bold'}} onClick={()=>accept(pkgData.packages_cost,type,pkgData.months)}>Accept</Button>}
 
                                         {(!spinner === false) && <Spinner animation="border" style={{marginLeft:'-21rem',color:'black'}}></Spinner>}
 
-                                        {!rejectbtn && <Button variant="light" className="" onClick={()=>reason()}>Reject</Button>}
+                                        {!rejectbtn && <Button variant="light" className="" style={{fontSize:'20px',fontWeight:'bold'}} onClick={()=>reason()}>Reject</Button>}
 
                                         </div>
                                         </>)

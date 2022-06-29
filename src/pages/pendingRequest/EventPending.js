@@ -81,12 +81,12 @@ export default function EventPending() {
 
                                         <hr></hr>
 
-                                        <div className='space-between camp-400'>
+                                        <div className='camp-400'>
                                             
-
+                                            
                                             <img src={eventList.photo === (undefined || null) ?notImage :imgUrl+eventList.photo} alt={eventList.order_id} width='50%'  style={{borderRadius:'20px',marginRight:'20px'}}  id="event_req_img"/>
-
-                                            <div className='font-12 content-end-two'>
+                                            <div>
+                                            <div className='font-12 content-end-two my-5'>
                                                 <p> Tittle : <span >{eventList.event_title}</span></p>
 
                                                 <p>Cost : <span className='bold-text' >${eventList.event_cost}.00  </span></p>
@@ -99,19 +99,19 @@ export default function EventPending() {
                                                 <p>Status : <span className='bold-text green'>{eventList.event_status} </span></p>
 
                                             </div>
-
+                                            
 
                                                 <div className=' space-between-two-btn mt-5' >
                                                     {paybtn || eventList.event_status === "Accepted" ? (<> 
                                                         </>):
                                                         ( eventList.event_status === 'Success' ? '' : (
                                                         <>
-                                                            {!pkgReject && <Button variant="light" style={{fontSize:'20px',fontWeight:'bold'}} className="px-5 mx-5" onClick={()=>accept()}>Accept</Button>}
+                                                            {!pkgReject && <Button variant="light" style={{fontSize:'20px',fontWeight:'bold'}}  onClick={()=>accept()}>Accept</Button>}
 
-                                                            {(!spinner === false) && <Spinner animation="border" style={{marginLeft:'-21rem',color:'black'}}></Spinner>}
 
-                                                            {!rejectbtn && <Button variant="light"style={{fontSize:'20px',fontWeight:'bold',marginLeft:'1rem'}}  className="px-5" onClick={()=>reason()}>Reject</Button>}
-
+                                                            {!rejectbtn && <Button variant="light"style={{fontSize:'20px',fontWeight:'bold',marginLeft:'1rem'}}  onClick={()=>reason()}>Reject</Button>}
+                                                            <div style={{width:"20px"}}></div>
+                                                            {(!spinner === false) && <Spinner animation="border" style={{color:'black'}}></Spinner>}
 
                                                         </>
                                                         ))
@@ -135,7 +135,7 @@ export default function EventPending() {
                                                 
                                                 </div>
                                            
-
+                                                </div>
 
 
                                         </div>
@@ -223,6 +223,7 @@ export default function EventPending() {
   function accept()
   {
     setSpinner(true);
+    setrejectbtn(false);
     const token = sessionstorage.getItem("token");
     const customer_id =  sessionstorage.getItem("customerId");
 

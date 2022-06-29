@@ -195,8 +195,8 @@ const CARD_ELEMENT_OPTIONS = {
                                           //handle success
                                           console.log("pay After",response); 
                       
-                                          toast.success('Payment Success!!',{autoClose:3000});
-                                          setTimeout(() => history.push('/success'),3000);
+                                          // toast.success('Payment Success!!',{autoClose:3000});
+                                          history.push('/success');
                                       })
                                       .catch(function (response) {
                                           //handle error
@@ -214,10 +214,10 @@ const CARD_ELEMENT_OPTIONS = {
         
               }
                 // return alert(`Payment successful, payment ID - ${res.data.id}`);
-              const res2 = await axios.post(Url+'checkAmount',{
-                id:res.data.id
-              });
-              alert(`Payment successful, payment ID - ${res.data.id}`);
+              // const res2 = await axios.post(Url+'checkAmount',{
+              //   id:res.data.id
+              // });
+              // alert(`Payment successful, payment ID - ${res.data.id}`);
             } 
             else {
               // Simple HTTP Payment was successful
