@@ -14,14 +14,59 @@ import Givenow from './Give';
 import { useHistory } from 'react-router-dom';
 import { Url } from '../../GLOBAL/global';
 
+var sessionstorage = require('sessionstorage');
+
 
 export default function Give() {
     const { register, handleSubmit } = useForm({ shouldUseNativeValidation: true });
     const [spinner,setSpinner] = React.useState(false);
+    const [customerInfo,setCustomerInfo] = React.useState();
     const stripe = useStripe();
     const elements = useElements();
     const stripePromise = loadStripe("pk_live_51KlNyrDp5HAOMMnMOfq5yKAHtb3WHJZyNLO6YK1so2QeT7gkDdqmHh15HH9A9UDdzMLTjdIyWQxFWTKz4QhWZHV800AA2sYk40");
     //pk_test_51KlNyrDp5HAOMMnM7fJdwCrmBsB2cl3VvmnDSEAznm49NFAw6H5EJBMmOYbL5JekAKl1yRqqHVcKWMKl7TNlHMqy005EkIk2Fh 
+
+
+    React.useEffect(() =>
+    {
+      getInfo();
+    },[])
+
+
+    async function getInfo()
+    {
+      console.log("get cust info")
+        const token = sessionstorage.getItem("token");
+        
+        let formdata = new FormData();
+        const customer_id = sessionstorage.getItem("customerId");
+
+        formdata.append("customer_id",customer_id);
+        
+        const headers ={
+            'Content-Type': 'multipart/form-data',
+            'Authorization': `Bearer ${token}`
+          }
+
+        await axios({
+            method: 'post',
+            url: Url+'getProfile',
+            data: formdata,
+            headers: headers
+            })
+            .then(function (response) {
+                //handle success
+               
+                console.log("getprofile",response.data.data[0]);
+                setCustomerInfo(response.data.data[0]);
+               
+                
+            })
+            .catch(function (response) {
+                //handle error
+                console.log(response);
+            });
+    }
     
     let history = useHistory();
     const CARD_ELEMENT_OPTIONS = {
@@ -46,6 +91,9 @@ export default function Give() {
 
       async function onSubmit(formdata,e)
       {
+
+        {console.log("customer",customerInfo.cust_id)}
+
           e.preventDefault();
           console.log(formdata)
   
@@ -62,12 +110,14 @@ export default function Give() {
               billing_details: billingDetails
           }) 
          
-          // const customer_id = sessionstorage.getItem("customerId");
+          const customer_id = sessionstorage.getItem("customerId");
   
           if(!error)
           {
           setSpinner(true);
           // toast.warning("payment initiated .!",{autoClose:2500});
+
+         
               try{
               let amt = formdata.amount *100;
               console.log("amt",amt);
@@ -76,7 +126,7 @@ export default function Give() {
                       currency: 'usd',
                       amount:amt,
                       id,
-                  cust_id:Math.random(),
+                  cust_id: customer_id? customer_id:customerInfo.cust_id,
                   stripeToken: paymentMethod.id,
                   subscription:"onetime",
                   email:formdata.email

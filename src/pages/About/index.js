@@ -39,7 +39,7 @@ In the present age of technology, you have great opportunity to spread the gospe
 <div class="section" id="about">
 	<div>
 	<div class="video">
-        <video autoPlay={true} loop muted>
+        <video autoPlay={true} loop muted playsInline >
           <source src={require('../../../src/assets/imgs/mic.mp4')} type="video/mp4" />
           <span></span>
         </video>

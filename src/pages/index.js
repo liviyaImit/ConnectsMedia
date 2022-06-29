@@ -62,6 +62,8 @@ import FooterPage from '../components/Footer/FooterPage';
 
 import Privacy from '../pages/Privacypolicy/Index';
 
+import Terms from '../pages/Termsandcondition/index';
+
 import Donate from '../pages/donation/index';
 
 
@@ -349,7 +351,8 @@ export default function Index() {
                 </Route>
 
                 <Route exact path='/terms-and-conditions'>
-                    <Privacy/>
+                <UserHeader/>
+                    <Terms/>
                     {/* <FooterPage/> */}
                 </Route>
 

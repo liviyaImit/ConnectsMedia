@@ -124,12 +124,14 @@ const CARD_ELEMENT_OPTIONS = {
       setSpinner(true);
       // toast.warning("payment initiated .!",{autoClose:2500});
         try{
+
+          let amt = amount*100;
             const {id} = paymentMethod 
             const res = await axios.post(Url+"donate",{
                 currency: 'usd',
-                amount:amount,
+                amount:amt,
                 id,
-               cust_id:customerInfo.cust_id,
+               cust_id:customer_id?customer_id:customerInfo.cust_id,
                stripeToken: paymentMethod.id,
                subscription:"onetime"
             })
