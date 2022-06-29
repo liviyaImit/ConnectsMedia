@@ -163,7 +163,7 @@ export default function Give() {
                 
                         var data = new FormData();
                         
-                        data.append("transaction_id",paymentIntent.id);
+                        data.append("stripe_id",paymentIntent.id);
                         data.append("name",formdata.name);
                         data.append("email",formdata.email);
                         data.append("amount",formdata.amount);
