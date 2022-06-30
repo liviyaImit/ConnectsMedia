@@ -75,6 +75,7 @@
     border: 1px solid red;
     padding: 10px;
     border-radius: 10px;
+    width: 50%;
 }
 
 
@@ -143,6 +144,7 @@
     clear: both;
     position: relative;
     float: right;
+    width: 100%;
   }
   
   .msg-container .arrow {
@@ -179,7 +181,7 @@
   
   .msg-container .message-body {
     float: left;
-    width: 300px;
+    width: 100%;
     height: auto;
     border: 1px solid #CCC;
     background-color: #ffffff;

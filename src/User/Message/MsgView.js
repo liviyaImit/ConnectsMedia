@@ -143,7 +143,7 @@ export default function MsgView() {
 
             <div className='msg-align mb-5'>
 
-              <Row>
+              <Row style={{flexDirection:"column"}}>
                   <Col className='flex-center'>
                   <p>Date : {''} {msgData.created_at !== null? dateFormat(msgData.created_at, "mmmm dS, yyyy"):""}</p>
                   {/* <p>Status : {''} {msgData.msg_status}</p> */}
@@ -165,9 +165,9 @@ export default function MsgView() {
                   </Col>
               </Row>
 
-
-              <Row className='mt-5'>
-                  
+ 
+              <Row className='mt-5' style={{flexDirection:"column"}} >
+                   
                   <Col className='flex-center'>
 
                       <div class="msg-container">
@@ -177,7 +177,7 @@ export default function MsgView() {
                       </div>
                   </Col>
 
-                  <Col className='flex-center'>
+                  <Col className='flex-center my-3'>
                           <button onClick={() => replay()}>Submit</button>
                   </Col>
               </Row>
