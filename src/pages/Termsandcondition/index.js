@@ -7,7 +7,7 @@ export default function Index() {
 
     <>
 
-    <div id="page-body">
+    <div id="page-body" className='terms'>
 
     <h1><strong className='text-content'>Terms And Conditions</strong></h1>
     <br></br>

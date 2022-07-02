@@ -130,7 +130,7 @@ export default function Index() {
   
   <>
 
-    <Container className='' >
+    <Container className='login' >
       
       <Row >
 
@@ -143,7 +143,7 @@ export default function Index() {
                 </Parallax>
                 </Col>
 
-                <Col xl={6} sm={12} md={12} xxl={6} className='py-5 my-5 m-20' >
+                <Col xl={6} sm={12} md={12} xxl={6} className='py-5 my-5 m-20 login-box-wrap' >
                   
                   <Parallax speed={-3}>
                     <h6 className='heading'>Login</h6>

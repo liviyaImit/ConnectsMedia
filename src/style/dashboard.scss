@@ -111,6 +111,10 @@
     margin: 40px;
 }
 
+.give-box h1{
+    font-size:160% !important;
+}
+
 .give-box img{
     width: 50% !important;
     height: 100% !important;
@@ -371,9 +375,6 @@ display: inline;
     // padding: 5px;
     // margin-bottom: -20px;
     // background-color: rgb(255, 255, 255);
-
-    
-
 }
 
 
@@ -626,8 +627,6 @@ display: inline;
     }
     //media#############################
 
-
-
     #service-list{
         position:relative;
         display:flex;
@@ -638,9 +637,6 @@ display: inline;
         border-radius:20px;
         flex-wrap:wrap;
         }
-
-
-
 
 
     #services>div

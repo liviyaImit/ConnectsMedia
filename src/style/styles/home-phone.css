@@ -262,14 +262,15 @@
   padding:var(--mainpad);
   }
   #service-wrap {
-  height:95%;
+  height:85%;
   }
   #service-list{
-  overflow-x:auto;
-  overflow-y:hidden;
+  overflow-x:hidden;
+  overflow-y:auto;
+  flex-wrap: nowrap;
   flex-direction: column;
-  scroll-snap-type: x mandatory;
-  }
+  scroll-snap-type: y mandatory;
+    }
   /* #service-list li{
   flex:1 1 auto;
   min-width:100%;
@@ -283,6 +284,7 @@
       transition-delay:0;
       transition:none;
       transform:none;
+      margin:5px 0;
       }
   
       #services.onfocus #service-list li{
@@ -410,9 +412,7 @@
   margin-left: -5vmax;
   margin-right: -7vmax;
   }
-  
-  
-  
+   
   .popup .active.subtitle{
   left:5vw;top:7vh;
   bottom:5vh;right:5vw;

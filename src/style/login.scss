@@ -1,8 +1,15 @@
 @import './main.scss';
 
+.login-box-wrap{
+    border:1px solid #fff;
+    border-radius:30px;
+    background-color: #efefef;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 .login-box
 {
-   
     border-block-color: inherit;
     border-color: rgb(32, 31, 31);
     // color: $primary_color;
@@ -15,6 +22,10 @@
 }
 
 @media (max-width:850px){
+    .login-box-wrap{
+    width:80%;
+    margin:0 10%;
+    }
     .m-20
     {
         margin-top: 0 !important;

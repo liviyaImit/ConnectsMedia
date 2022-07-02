@@ -4,9 +4,9 @@
 //     background: linear-gradient(to right, #ff5f6d, #ffc371);
 //     min-height: 100vh;
 //   }
-
+// style={{backgroundColor:'floralwhite'}}
 footer{
-  background-color: #000;
+  background-color: black;
   border-radius:20px;
 }
   #button-addon1 {
@@ -25,4 +25,16 @@ footer{
   
   .form-control.shadow-0:focus {
     box-shadow: none;
+  }
+
+  .watch-livetv{
+    width:60%;
+    height:100px;
+    border-radius:20px;
+    background-color: rgb(9, 47, 119);
+    color:#fff;
+    font-size:130%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

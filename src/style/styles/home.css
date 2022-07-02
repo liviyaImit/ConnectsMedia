@@ -45,13 +45,15 @@ text-decoration:none;
 #page-head{
     /* background-color: #111d4257; */
     background-color: transparent;
-position:fixed; 
 height:100px;
 z-index:1500;
 top:0;left:0;
 width:100%;
 display:flex;
 transition:all 300ms;
+}
+.home-nav #page-head{
+    position:fixed;
 }
 /* #page-head-main{
     background-color: #10329713;
@@ -937,6 +939,7 @@ margin-bottom:10px;
 
 /*Services*/
 #services h1{
+color:#fff;
 text-align:center;
 padding-bottom:20px;
 }

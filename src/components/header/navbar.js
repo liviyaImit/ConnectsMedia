@@ -71,7 +71,7 @@ export default function Navbar(props,id) {
     return (
         <>
       
-            <section className='navbar'>
+            <section className={'navbar '+ props.className}>
   
     
                         {/* header logo */}

@@ -52,7 +52,7 @@ export default function Index() {
     <Elements  stripe={stripePromise}  >
 
     <div className="give-box-sub-child">
-    <h1>Help people like JENET JOSHY and her husband</h1>
+    <h1>You have a great opportunity to sow in the kingdom work</h1>
 
                         <Givenow />
                         </div>

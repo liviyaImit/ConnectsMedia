@@ -116,17 +116,25 @@ $(window).on("scroll", function () {
 });
 $(document).ready(function(){
 	onEntryEffects();
+
+	//check for back button calls - receiving hash tag
+	var hash = window.location.hash;
+	if(hash!=''){
+		window.location.href=hash;
+		console.log('in');
+	}
+
 	$("#section-nav li:not([data-section=login])").click(function(){
 		var section=$(this).attr("data-section");
-		//location.href="#"+section;
 		if (section === 'login')
 		{
 			return;
 		}
 		$("body,html").removeClass("freeze");
-		$('body,html').animate({
-			scrollTop: $("#"+section).offset().top
-		});
+		window.location.href="#"+section;
+		// $('body,html').animate({
+		// 	scrollTop: $("#"+section).offset().top
+		// });
 		
 		//close mobile menu
 		$('#nav-icon').removeClass("open");
@@ -300,7 +308,7 @@ $("#page-logo").click(function(){
   return (
     <>
 
-	<Navbar className='nav-main' style={{paddingTop:'0 !important',paddingBottom:'0 !important',backgroundColor:'transparent'}}/>
+	<Navbar className='home-nav' style={{paddingTop:'0 !important',paddingBottom:'0 !important',backgroundColor:'transparent'}}/>
 
     <div id="scroll-snap">
 		{/* <div className='main-screen-hide-section'> */}

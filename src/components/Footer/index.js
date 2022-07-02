@@ -29,8 +29,8 @@ export default function Index() {
         <div className="col-lg-1">
         </div>
         <div className="col-lg-4 col-md-6 mb-4 mb-lg-0 ml-5">
-           
-          <img src={require('../../assets/images/cm-01.jpg')}  onClick={()=>home()} style={{width: '65%',borderRadius:'8px',height:'auto'}} className="pointer" alt="logo"/>
+           <div className="watch-livetv" >Watch Live TV</div>
+          {/* <img src={require('../../assets/images/cm-01.jpg')}  onClick={()=>home()} style={{width: '65%',borderRadius:'8px',height:'auto'}} className="pointer" alt="logo"/> */}
           <p className="font-italic text-muted mt-5">We know how to get you there.<br></br>Your 100% satisfaction is guaranteed.</p>
           <ul className="list-inline mt-4">
             <li className="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -72,7 +72,7 @@ export default function Index() {
       </div>
     </div>
 
-    <div className="bg-light py-4">
+    <div className="bg-light py-4" style={{backgroundColor:'floralwhite !important'}}>
       <div className="container text-center">
         
         <p className="text-muted mb-0 py-2">© 2022 Connect Media Networks All rights reserved.</p>

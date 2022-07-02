@@ -135,7 +135,7 @@ export default function Campaigns() {
                                 </>
                                 ):(
                                     <>
-                                <button onClick={()=>history.push('/events-creation')}>Start Here</button>
+                                <button onClick={()=>{postLoginRedirect('event');}}>Start Here</button>
                                 </>
                                 )
                             }
@@ -155,7 +155,7 @@ export default function Campaigns() {
                                 </>
                                 ):(
                                     <>
-                                <button onClick={()=>history.push('/million-posts')}>Start Here</button>
+                                <button onClick={()=>postLoginRedirect('million')}>Start Here</button>
                                 </>
                                 )
                             }
@@ -174,7 +174,7 @@ export default function Campaigns() {
                                 </>
                                 ):(
                                     <>
-                                <button onClick={()=>history.push('/million-posts')}>Start Here</button>
+                                <button onClick={()=>postLoginRedirect('million')}>Start Here</button>
                                 </>
                                 )
                             }
@@ -189,7 +189,7 @@ export default function Campaigns() {
                                 </>
                                 ):(
                                     <>
-                                <button onClick={()=>history.push('/staticPosts')}>Start Here</button>
+                                <button onClick={()=>postLoginRedirect('static')}>Start Here</button>
                                 </>
                                 )
                             }
@@ -205,7 +205,7 @@ export default function Campaigns() {
                                 </>
                                 ):(
                                     <>
-                                <button onClick={()=>history.push('/staticPosts')}>Start Here</button>
+                                <button onClick={()=>postLoginRedirect('static')}>Start Here</button>
                                 </>
                                 )
                             }
@@ -222,7 +222,7 @@ export default function Campaigns() {
                                 </>
                                 ):(
                                     <>
-                                <button onClick={()=>history.push('/staticPosts')}>Start Here</button>
+                                <button onClick={()=>postLoginRedirect('static')}>Start Here</button>
                                 </>
                                 )
                             }
@@ -237,6 +237,7 @@ export default function Campaigns() {
 
     function redirectto(type)
     {
+        window.location.href="#campaigns";
         if(type === "event")
         {
             sessionstorage.setItem("camp","/events-creation");
@@ -256,6 +257,25 @@ export default function Campaigns() {
             sessionstorage.setItem("camp","/staticPosts");
             history.push('/login');
             history.go(0);
+        }
+    }
+
+    function postLoginRedirect(type)
+    {
+        window.location.href="#campaigns";
+        if(type === "event")
+        {
+            history.push("/events-creation");
+        }
+
+        if(type === "million")
+        {
+            history.push("/million-posts");
+        }
+
+        if(type === "static")
+        {
+            history.push('/staticPosts');
         }
     }
 }

@@ -109,7 +109,6 @@ const CARD_ELEMENT_OPTIONS = {
     const handleSubmit = async (e) =>
     {
 
-     
         e.preventDefault();
         const {error,paymentMethod} = await stripe.createPaymentMethod({
             type: "card",
@@ -201,17 +200,13 @@ const CARD_ELEMENT_OPTIONS = {
                                       .catch(function (response) {
                                           //handle error
                                           console.log(response);
-                                      
                                       });
           
                           })
                           .catch(function (response) {
                               //handle error
                               console.log(response);
-                            
                           });
-              
-        
               }
                 // return alert(`Payment successful, payment ID - ${res.data.id}`);
               // const res2 = await axios.post(Url+'checkAmount',{
