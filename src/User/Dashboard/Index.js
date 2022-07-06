@@ -403,7 +403,7 @@ export default function Index() {
             </div>
             <div id="service1" class="subtitle">
                 <div class="content">
-                <h2>Promotions & Ads</h2>
+                <h2>Promotions & Ads </h2>
                 <ul>
                 <li>Special campaign promotions with targeted reach and performance tracking</li>
                 <li>Promote your organization in targeted location with specific demographics</li>

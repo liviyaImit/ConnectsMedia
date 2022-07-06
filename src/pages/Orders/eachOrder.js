@@ -442,13 +442,12 @@ export default  function EachOrder() {
                                         return (
                                             <div className="payment ">
 
-                                                <AiOutlineClose className='Ai-close pointer' onClick={()=>onClose()} size={28}/>
+                                            <AiOutlineClose className='Ai-close pointer' onClick={()=>onClose()} size={28}/>
         
                                             <Elements stripe={stripePromise} >
-                                                <CheckoutForm  visibility={true} />
+                                                <CheckoutForm  visibility={true} onClose={onClose} />
                                             </Elements>
-                                
-                                
+
                                     </div>
                                         
                                         );

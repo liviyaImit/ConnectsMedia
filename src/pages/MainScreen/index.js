@@ -132,9 +132,9 @@ $(document).ready(function(){
 		}
 		$("body,html").removeClass("freeze");
 		window.location.href="#"+section;
-		// $('body,html').animate({
-		// 	scrollTop: $("#"+section).offset().top
-		// });
+		$('body,html').animate({
+			scrollTop: $("#"+section).offset().top
+		});
 		
 		//close mobile menu
 		$('#nav-icon').removeClass("open");

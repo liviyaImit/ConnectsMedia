@@ -26,7 +26,7 @@ export default function Whyconnect() {
                 utilized to it’s potential. </p>                
                 <br></br>
                 <p>Challenges Facing Churches & Ministries Today:</p>
-                <br></br>
+                <br></br> 
                 <li>Time: Pastors and staff members wear multiple hats.</li>
                 <li>Expertise: Pastors and staff members don’t have the expertise with internet and social media.</li>
                 <li>Money: Hiring someone to do it costs around $30-60K/year.</li>
@@ -142,6 +142,15 @@ export default function Whyconnect() {
                     </script> */}
                 </div>
             </div>
+
+
+
+          
+
+
+
+
+
         </div>
 	  </div>
   </div>

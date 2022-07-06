@@ -259,7 +259,7 @@
   padding-bottom:5px;
   }
   #services>div{
-  padding:var(--mainpad);
+  padding:var(--mainpad)!important;
   }
   #service-wrap {
   height:85%;
@@ -331,6 +331,7 @@
   }
   .package h4{
   text-align:center;
+  padding: 10px;
   }
   
   #campaigns>div{
@@ -481,4 +482,21 @@
     #contact #contact-card {
       padding-top: 45% !important;
     }
+    #pillars li img{
+      height: 90%;
+    }
+    .main-packages li{
+      padding: 2px 0px 4px 20px;
+    }
+    button{
+      padding: 10px 20px;
+    }
+    #give .content{
+      width: 100%;
+    }
+    #testimonials li{
+      height: 90%;
+    }
+    
   }
+  

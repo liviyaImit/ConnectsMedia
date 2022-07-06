@@ -9,7 +9,7 @@ import { Url,isLoggin } from "../GLOBAL/global";
 
 var sessionstorage = require('sessionstorage');
 
-export default function CheckoutForm()
+export default function CheckoutForm(props)
 {
 
   const [customerInfo,setCustomerInfo] = React.useState({});
@@ -110,6 +110,7 @@ const CARD_ELEMENT_OPTIONS = {
     {
 
         e.preventDefault();
+
         const {error,paymentMethod} = await stripe.createPaymentMethod({
             type: "card",
             card: elements.getElement(CardElement),
@@ -140,16 +141,19 @@ const CARD_ELEMENT_OPTIONS = {
 
             if(res.data.actionRequired)
             {
+
               const { paymentIntent, error } = await stripe.confirmCardPayment(
                 res.data.clientSecret
               );
 
-
+              if (error){
+                alert("Error in payment, please try again later");
+                props.onClose();
+                return;
+              }
 
               console.log("payment Inten",paymentIntent)
 
-              if (error) return alert("Error in payment, please try again later");
-              
               if (paymentIntent.status === "succeeded")
               {
                   const token = sessionstorage.getItem("token");
@@ -194,13 +198,16 @@ const CARD_ELEMENT_OPTIONS = {
                                           //handle success
                                           console.log("pay After",response); 
                       
-                                          // toast.success('Payment Success!!',{autoClose:3000});
-                                          history.push('/success');
+                                          toast.success('Payment Success!!',{autoClose:3000});
+                                          
+                                          window.location.reload();
+                                          //history.push('/success');
                                       })
-                                      .catch(function (response) {
+                                      .cat
+                                      (function (response) {
                                           //handle error
                                           console.log(response);
-                                      });
+                                      });   
           
                           })
                           .catch(function (response) {
@@ -212,7 +219,7 @@ const CARD_ELEMENT_OPTIONS = {
               // const res2 = await axios.post(Url+'checkAmount',{
               //   id:res.data.id
               // });
-              // alert(`Payment successful, payment ID - ${res.data.id}`);
+              // alert(`Payment successful, payment ID - ${res.data.id}`);zzzzzz
             } 
             else {
               // Simple HTTP Payment was successful
